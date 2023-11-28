@@ -9,6 +9,8 @@
 		<h1>ALL projects</h1>
 		<ul>
 			<li><a id="loader" target="_blank">Loader</a></li>
+            <li><a id="test" target="_blank">test</a></li>
+            <li><a id="loginpage" target="_blank">loginpage</a></li>
 		</ul>
 
 		<script>
@@ -18,6 +20,8 @@
 
 			// Now you can use baseURL to construct your links
 			var loaderPageURL = baseURL + 'loader/index.html';
+			var testPageURL = baseURL + 'test/test.html';
+			var loginpagePageURL = baseURL + 'loginpage/loginpage.html';
 
 			// Get all <li> elements
 			var listItems = document.querySelectorAll('ul li');
@@ -31,6 +35,10 @@
 				switch (anchorElement.id) {
 					case 'loader':
 						document.querySelector('#loader').setAttribute('href', loaderPageURL);
+					case 'test':
+						document.querySelector('#test').setAttribute('href', testPageURL);
+                        case 'loginpage':
+						document.querySelector('#loginpage').setAttribute('href', loginpagePageURL);
 				}
 			});
 		</script>
