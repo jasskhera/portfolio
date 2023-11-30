@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(UI\ wallpaper.jpg);
+    background-repeat: no-repeat;
+    /* filter: brightness(90%); */
+}
+
+nav {
+    height: 80px;
+    background-color: rgba(72, 156, 224, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    padding: 0 20px 0 20px;
+
+}
+
+.navi ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px 0 20px;
+}
+
+.navi ul li {
+    list-style: none;
+}
+
+.navi ul li a {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(225, 223, 223);
+    position: relative;
+}
+
+.navi ul li a:hover {
+    cursor: pointer;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: underline;
+}
+
+.section {
+    height: 500px;
+    width: 1000px;
+    /* background-color: aliceblue; */
+    /* opacity: 0.5; */
+    display: flex;
+    margin: auto;
+}
+
+.section1 {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(8, 7, 7);
+    font-size: 30px;
+}
+
+.section2 {
+    min-height: 500px;
+    min-width: 500px;
+   
+}

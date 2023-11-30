@@ -5,92 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            height: 100vh;
-            width: 100vw;
-            background-image: url(assets/UI\ wallpaper.jpg);
-            background-repeat: no-repeat;
-            /* filter: brightness(90%); */
-        }
-
-        nav {
-            height: 80px;
-            background-color: rgba(72, 156, 224, 0.5);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            backdrop-filter: blur(10px);
-            padding: 0 20px 0 20px;
-
-        }
-
-        .navi ul {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 0 20px 0 20px;
-        }
-
-        .navi ul li {
-            list-style: none;
-        }
-
-        .navi ul li a {
-            text-decoration: none;
-            font-size: 25px;
-            font-weight: 500;
-            color: rgb(225, 223, 223);
-            position: relative;
-        }
-
-        .navi ul li a:hover {
-            cursor: pointer;
-            text-transform: uppercase;
-            color: white;
-            text-decoration: underline;
-        }
-
-        .section {
-            height: 500px;
-            width: 1000px;
-            /* background-color: aliceblue; */
-            /* opacity: 0.5; */
-            display: flex;
-            margin: auto;
-        }
-
-        .section1 {
-            height: 500px;
-            width: 500px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: rgb(8, 7, 7);
-            font-size: 30px;
-        }
-
-        .section2 {
-            min-height: 500px;
-            min-width: 500px;
-        }
-    </style>
+  <link rel="stylesheet" href="style2.css">
 </head>
 
 <body>
     <div class="container">
         <nav class="navi">
-            <embed src="assets/Kalam logo.pdf" width="80px" height="80px" />
+            <img src="assets/JK logo.png" height="80px" width="100px" alt="">
             <ul>
-                <li><a id="home">Home</a></li>
-                <li><a id="about-us">About</a></li>
-                <li><a id="projects" target="_blank">Projects</a></li>
+                <li><a id="homepage" href="assets/homepage.html">Home</a></li>
+                <li><a id="about-us" href="assets/aboutUs.html">About</a></li>
+                <li><a id="projects" href="assets/index.html">Projects</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
         </nav>
@@ -106,8 +31,9 @@
     var baseURL = isDevelopment ? '/portfolio/' : 'http://localhost:5500/';
 
     // Now you can use baseURL to construct your links
-    var homePage = baseURL + 'assets/homepage.html';
-    var aboutUsPage = baseURL + 'about-us/aboutUs.html';
+    var homepagePage = baseURL + 'assets/homepage.html';
+    var aboutUsPage = baseURL + 'assets/aboutUs.html';
+    var projectsPage = baseURL + 'assets/index.html';
 
 
     // Get all <li> elements
@@ -122,12 +48,12 @@
         switch (anchorElement.id) {
             case 'loader':
                 document.querySelector('#loader').setAttribute('href', loaderPageURL);
-            case 'test':
-                document.querySelector('#test').setAttribute('href', testPageURL);
-            case 'loginpage':
-                document.querySelector('#loginpage').setAttribute('href', loginpagePageURL);
+            case 'projects':
+                document.querySelector('#projects').setAttribute('href', projectsPageURL);
+            case 'homepage':
+                document.querySelector('#homepage').setAttribute('href', homepagePageURL);
             case 'about-us':
-                document.querySelector('#about-us').setAttribute('href', aboutUsPage);
+                document.querySelector('#about-us').setAttribute('href', aboutUsPageURL);
         }
     });
 </script>
