@@ -11,6 +11,7 @@
 			<li><a id="loader" target="_blank">Loader</a></li>
             <li><a id="test" target="_blank">test</a></li>
             <li><a id="loginpage" target="_blank">loginpage</a></li>
+            <li><a id="portfolio" target="_blank">portfolio</a></li>
 		</ul>
 
 		<script>
@@ -22,6 +23,7 @@
 			var loaderPageURL = baseURL + 'loader/index.html';
 			var testPageURL = baseURL + 'test/test.html';
 			var loginpagePageURL = baseURL + 'loginpage/loginpage.html';
+			var portfolioPageURL = baseURL + 'portfolio/index.html';
 
 			// Get all <li> elements
 			var listItems = document.querySelectorAll('ul li');
@@ -39,6 +41,8 @@
 						document.querySelector('#test').setAttribute('href', testPageURL);
                         case 'loginpage':
 						document.querySelector('#loginpage').setAttribute('href', loginpagePageURL);
+						case 'portfolio':
+						document.querySelector('#portfolio').setAttribute('href', portfoliopagePageURL);
 				}
 			});
 		</script>
