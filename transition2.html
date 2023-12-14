@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underline animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            background: rgb(41, 170, 220);
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+            /* align-items: center; */
+        }
+
+        ul {
+            display: flex;
+            gap: 35px;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        ul li a {
+            color: antiquewhite;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            color: blue;
+            font-size: 20px;
+        }
+
+        .nav-option a:hover {
+            border-bottom: 1px solid black;
+        }
+
+        .nav-option a {
+            border-bottom: none;
+            transition-timing-function: linear;
+            transition-duration: 2s
+        }
+        
+        .nav-option a:hover {
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li class="nav-option"><a href="#">Element1</a></li>
+            <li><a href="#">Element2</a></li>
+            <li><a href="#">Element3</a></li>
+            <li><a href="#">Element4</a></li>
+
+        </ul>
+    </div>
+</body>
+
+</html>
