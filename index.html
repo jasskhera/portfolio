@@ -44,6 +44,7 @@
             <li><a id="loginpage" target="_blank">loginpage</a></li>
             <li><a id="portfolio" target="_blank">portfolio</a></li>
             <li><a id="book" target="_blank">Book</a></li>
+            <li><a id="animatedloginform" target="_blank">animatedloginform</a></li>
 		</ul>
 	</div>
 
@@ -58,6 +59,7 @@
 			var loginpagePageURL = baseURL + 'loginpage/loginpage.html';
 			var portfolioPageURL = baseURL + 'portfolio/portfolio.html';
 			var bookPageURL = baseURL + 'book/Book.html';
+			var animatedloginformPageURL = baseURL + 'animatedloginform/index.html';
 
 			// Get all <li> elements
 			var listItems = document.querySelectorAll('ul li');
@@ -79,6 +81,8 @@
 						document.querySelector('#portfolio').setAttribute('href', portfolioPageURL);
 						case 'book':
 						document.querySelector('#book').setAttribute('href', bookPageURL);
+						case 'animatedloginform':
+						document.querySelector('#animatedloginform').setAttribute('href', animatedloginformPageURL);
 				}
 			});
 		</script>
