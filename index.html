@@ -4,9 +4,40 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Portfolio</title>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			div{
+				height: 500px;
+				width: 400px;
+				border: 2px solid;
+				border-radius: 5px;
+				margin: 50px;
+			}
+			h1{
+				text-align: center;
+				text-decoration: underline;
+			}
+			ul li{
+				display: flex;
+				justify-content: center;
+				padding: 5px;
+			}
+			ul li a{
+				text-decoration: none;
+				color: rgb(16, 93, 123);
+				font-size: 25px;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>ALL projects</h1>
+		<div>
+		<h1 >All Projects</h1>
 		<ul>
 			<li><a id="loader" target="_blank">Loader</a></li>
             <li><a id="test" target="_blank">test</a></li>
@@ -14,6 +45,7 @@
             <li><a id="portfolio" target="_blank">portfolio</a></li>
             <li><a id="book" target="_blank">Book</a></li>
 		</ul>
+	</div>
 
 		<script>
 			var isDevelopment = true; // Change this to false for production
