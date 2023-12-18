@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book with dark mode</title>
+    <link rel="stylesheet" href="./bookExperimental.css">
+    <link rel="stylesheet" href="globalcssforbook.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+
+<body>
+    <nav>
+        <button onclick="changeColor('black', 'White')">Dark Mode</button> 
+        <button onclick="changeColor('White', 'black')">Normal Mode</button> 
+    </nav>
+    <div class="container">
+        <div class="box">
+            <div class="main">
+                <h1 class="heading">Index</h1>
+                <ul>
+                    <li><a href="./chapter1.html">Chapter 1: Don't Try</a></li>
+                    <li><a href="./chapter1.html#hell">The Feedback loop from Hell</a></li>
+                    <li><a href="./chapter2.html">Chapter 2: Desire</a></li>
+                    <li><a href="./chapter2.html#summary">Summary</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        function changeColor(primaryColor, secondaryColor) {
+            document.documentElement.style.setProperty('--primaryColor', primaryColor);
+            document.documentElement.style.setProperty('--secondaryColor', secondaryColor);
+
+            localStorage.setItem('primaryColor', primaryColor);
+            localStorage.setItem('secondaryColor', secondaryColor);
+        }
+    </script>
+    <script src="./bookExperimental.js"></script>
+</body>
+
+</html>
