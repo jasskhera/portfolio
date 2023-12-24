@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <script src="./assets/jquery.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
+
 <body>
     <div class="main">
         <div class="nav">
@@ -18,15 +23,16 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <div id="drop">
-                <li id="proj" ><a href="#" style="padding: 10px;">Projects</a><i class="fa fa-angle-down fa-angle-up"></i></li>
-                <div id="pros" style="background-color: rgba(255, 255, 255, 0.05)">
-                    <p >
-                    <li><a href="">Login Page</a></li>
-                    <li><a href="">Book</a></li>
-                    <li><a href="">Login form</a></li>
-                </p>
+                    <li id="proj"><a href="#" style="padding: 10px;">Projects</a><i
+                            class="fa fa-angle-down fa-angle-up"></i></li>
+                    <div id="pros" style="background-color: rgba(255, 255, 255, 0.05)">
+                        <p>
+                            <li><a href="">Login Page</a></li>
+                            <li><a href="">Book</a></li>
+                            <li><a href="">Login form</a></li>
+                        </p>
+                    </div>
                 </div>
-            </div>
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
@@ -35,9 +41,9 @@
                 <p style="font-size: 30px; ">I'm</p>
                 <p style="font-size: 60px; ">Jasvinder Khera</p>
                 <div class="btn">
-                <button>Contact Me</button>
-                <button>Resume</button>
-            </div>
+                    <button>Contact Me</button>
+                    <button>Resume</button>
+                </div>
             </div>
             <div class="projectbox">
                 <h1 style="color: black; padding-top: 90px;">My Projects</h1>
@@ -57,9 +63,9 @@
             </div>
         </div>
     </div>
-  
+
     <script>
-        $("#proj").click(function(){
+        $("#proj").click(function () {
             $(this).parent().children("#pros").slideToggle()
 
             $(this).children("i").toggleClass("fa-angle-down")
@@ -67,10 +73,20 @@
 
 
         $('.showcase').slick({
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3
-});
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: true,
+            variableWidth: true
+        });
+    </script>
+    <script>
+        $(document).on('ready', function () {
+            // initialization of slick carousel
+            $.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
+        });
     </script>
 </body>
+
 </html>
