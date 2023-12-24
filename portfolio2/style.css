@@ -1,0 +1,125 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: rgb(36, 34, 34);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    height: 70px;
+    background-color: rgb(28, 27, 27);
+
+}
+
+.nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.nav ul li {
+    list-style: none;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.nav ul li a:hover {
+    color: aqua;
+
+}
+#drop{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    
+}
+/* li #drop{
+   margin:5px;
+   
+} */
+#pros{
+    display: none;
+}
+
+.content {
+    display: flex;
+    min-height: 550px;
+}
+
+.namebox {
+    margin: auto;
+    height: 500px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.btn button {
+    height: 30px;
+    width: 100px;
+    border: none;
+    margin: 10px;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+.btn button:hover {
+    background-color: aqua;
+    color: white;
+    cursor: pointer;
+}
+
+.projectbox {
+    background-image: url(./assets/projectboxbg.png);
+    background-repeat: no-repeat;
+    margin: auto;
+    height: 600px;
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    /* background-color: rgb(255, 255, 255); */
+}
+ 
+.projectbox ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.projectbox ul li a:hover {
+    color: rgb(25, 108, 140);
+    cursor: pointer;
+}
+.aboutsection{
+    
+}
+
+.showcase{
+    /* margin: 20px 0; */
+    height: 500px;
+    width: 100%;
+    background-color: aliceblue;
+}
+.showcase .item{
+    height: 250px;
+    width: 250px;
+    background-color: blue;
+    border: 2px solid;
+}
