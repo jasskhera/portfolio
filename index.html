@@ -47,6 +47,7 @@
             <li><a id="animatedloginform" target="_blank">animatedloginform</a></li>
             <li><a id="table" target="_blank">table</a></li>
             <li><a id="list" target="_blank">list</a></li>
+            <li><a id="jsonloginform" target="_blank">jsonloginform</a></li>
 		</ul>
 	</div>
 
@@ -64,6 +65,7 @@
 			var animatedloginformPageURL = baseURL + 'animatedloginform/index.html';
 			var tablePageURL = baseURL + 'table/index.html';
 			var listPageURL = baseURL + 'list/list.html';
+			var jsonloginformPageURL = baseURL + 'jsonloginform/loginform.html';
 
 			// Get all <li> elements
 			var listItems = document.querySelectorAll('ul li');
@@ -91,6 +93,8 @@
 						document.querySelector('#table').setAttribute('href', tablePageURL);
 						case 'list':
 						document.querySelector('#list').setAttribute('href', listPageURL);
+						case 'jsonloginform':
+						document.querySelector('#jsonloginform').setAttribute('href', jsonloginformPageURL);
 				}
 			});
 		</script>
