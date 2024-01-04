@@ -48,6 +48,7 @@
             <li><a id="table" target="_blank">table</a></li>
             <li><a id="list" target="_blank">list</a></li>
             <li><a id="jsonloginform" target="_blank">jsonloginform</a></li>
+            <li><a id="complexform" target="_blank">complexform</a></li>
 		</ul>
 	</div>
 
@@ -66,6 +67,7 @@
 			var tablePageURL = baseURL + 'table/index.html';
 			var listPageURL = baseURL + 'list/list.html';
 			var jsonloginformPageURL = baseURL + 'jsonloginform/loginform.html';
+			var complexformPageURL= baseURL + 'complexform/index.html';
 
 			// Get all <li> elements
 			var listItems = document.querySelectorAll('ul li');
@@ -95,6 +97,8 @@
 						document.querySelector('#list').setAttribute('href', listPageURL);
 						case 'jsonloginform':
 						document.querySelector('#jsonloginform').setAttribute('href', jsonloginformPageURL);
+						case 'complexform':
+						document.querySelector('#complexform').setAttribute('href', complexformPageURL);
 				}
 			});
 		</script>

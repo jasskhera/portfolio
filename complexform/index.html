@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="" method="post">
+        <h2>Registration Form</h2>
+        <table>
+            <tr>
+                <th>First Name:</th>
+                <th><input type="text" name="firstname" id="firstname" required></th>
+            </tr>
+
+            <tr>
+                <th>Last Name:</th>
+                <th><input type="text" name="lastname" id="lastname" required></th>
+            </tr>
+
+            <tr>
+                <th>Email:</th>
+                <th><input type="email" name="email" id="email" required></th>
+            </tr>
+
+            <tr>
+                <th>Re-type Email:</th>
+                <th><input type="email" name="retypeemail" id="retypeemail" required></th>
+            </tr>
+
+            <tr>
+                <th>Password:</th>
+                <th><input type="password" name="password" id="password" required></th>
+            </tr>
+
+            <tr>
+                <th>Re-type Password:</th>
+                <th><input type="password" name="retypepassword" id="retypepassword" required></th>
+            </tr>
+
+            <tr>
+                <th>Address:</th>
+                <th><input type="address" name="address" id="address" required></th>
+            </tr>
+
+            <tr>
+                <th>City:</th>
+                <th><input type="city" name="city" id="city" required></th>
+            </tr>
+
+            <tr>
+                <th>State:</th>
+                <th>
+                    <select name="State" id="state" aria-placeholder="Choose a state" required>
+                        <option value="delhi">Delhi</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="kolkata">Kolkata</option>
+                        <option value="rajasthan">Rajasthan</option>
+                    </select>
+                </th>
+
+            </tr>
+
+            <tr>
+                <th>Zip Code:</th>
+                <th><input type="number" id="zipcode" required></th>
+            </tr>
+
+            <tr>
+                <th>Phone:</th>
+                <th><input type="tel" id="tel" required></th>
+            </tr>
+
+            <tr>
+                <th>Date of Birth:</th>
+                <th><input type="date" id="date" min='1959-01-01' max='2004-01-01' required></th>
+            </tr>
+
+            <tr>
+                <th>Gender:</th>
+                <th>
+                    <select name="gender" id="gender" required>
+                        <option value="male" id="male">Male</option>
+                        <option value="female" id="female">Female</option>
+                        <option value="other" id="other">Other</option>
+                    </select>
+                </th>
+            </tr>
+
+            <tr>
+                <th>Security Question:</th>
+                <th>
+                    <select name="question" id="question" value="Choose a security question" required>
+                        <option value="highschool" id="highschool">What was your high school name?</option>
+                        <option value="pet" id="pet">What was your first pet name?</option>
+                        <option value="destination" id="destination">Which is your favourite Destination?</option>
+                        <option value="firstphone" id="firstphone">Which was your First Phone?</option>
+                    </select>
+                </th>
+            </tr>
+
+            <tr>
+                <th>Security Answer:</th>
+                <th><input type="text" id="answer" required></th>
+            </tr>
+            <tr>
+                <th>Upload ID Proof:</th>
+                <th><input type="file" name="id" id="id"></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th><button id="submit">submit</button></th>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
