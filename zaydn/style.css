@@ -3,7 +3,7 @@ html {
   min-height: 100vh;
   width: 100vw;
   background: #ffffff;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 * {
@@ -18,7 +18,7 @@ html {
   position: relative;
   height: 35px;
   font-size: 12px;
-  background-color: #F6F83E;
+  background-color: #f6f83e;
   /* padding-bottom: 10px; */
   letter-spacing: 1px;
   line-height: 1.3;
@@ -94,18 +94,18 @@ ul {
   height: 90px;
 }
 
-.search-content{
+.search-content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#search input{
+#search input {
   padding: 30px 480px;
   border: none;
 }
 
-#search button{
+#search button {
   background-color: transparent;
   border: none;
 }
@@ -155,13 +155,13 @@ ul {
 
 /* Hover effect */
 .shop-now::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%; /* Initial position, fully left */
   width: 100%;
   height: 100%;
-  color:black;
+  color: black;
   background-color: #ffffff; /* New background color on hover */
   transition: left 0.3s ease;
   z-index: -1; /* Place the pseudo-element below the button content */
@@ -171,7 +171,7 @@ ul {
   left: 0; /* Transition to the right */
 }
 
-.shop-now:hover{
+.shop-now:hover {
   color: rgb(0, 0, 0);
 }
 
@@ -183,7 +183,7 @@ ul {
 .slideshow {
   position: relative;
   z-index: 1;
-  height: 1280px;
+  min-height: 1280px;
   min-width: 768px;
 }
 
@@ -241,11 +241,11 @@ ul {
   }
 }
 
-.slider .slick-initialized .slick-slider .slick-dotted{
-position: relative;
+.slider .slick-initialized .slick-slider .slick-dotted {
+  position: relative;
 }
 
-.slick-dots{
+.slick-dots {
   position: absolute;
   left: 95%;
   bottom: 51%;
@@ -260,14 +260,12 @@ position: relative;
   overflow-x: scroll;
 }
 
-
 .circle {
   /* background-color: black; */
   height: 150px;
   width: 150px;
   border-radius: 50%;
   overflow: hidden;
-
 }
 
 .categories ul li .circle img {
@@ -281,7 +279,6 @@ position: relative;
   /* background-color: blueviolet; */
   /* width: 100vw; */
   margin: 50px 150px;
-
 }
 
 .vdbox {
@@ -302,28 +299,44 @@ position: relative;
   width: 100%;
   object-fit: contain;
   object-position: center;
-
 }
 
 /* 100 OFF BANNER */
 
 .marqbox {
   height: 100px;
+  overflow: hidden;
 }
 
-.marq span {
-  letter-spacing: 1px;
-  font-size: 40px;
-  font-family: sans-serif;
-  padding: 10px 5px;
+.marq {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+
+  animation-name: loop;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: linear;
 }
 
-.reverse-marq span {
-  letter-spacing: 1px;
-  font-size: 20px;
-  font-family: sans-serif;
-  padding: 10px 5px;
+.marq p {
+  font-size: 42px;
+    padding: 0 24px;
 }
+.reverse p{
+  font-size: 24px;
+}
+
+@keyframes loop {
+  from{
+      transform: translate3d(-100%,0,0);
+  }
+  to{
+      transform: translate3d(0,0,0);
+  }
+}
+
 
 /* SHOP BY STYLE SECTION */
 
@@ -335,26 +348,27 @@ position: relative;
   display: flex;
 }
 
-.stylenav{
+.stylenav {
   display: flex;
   justify-content: space-between;
-  padding: 70px 0 0px 70px; ;
+  padding: 70px 0 0px 70px;
 }
 
-.sort a{
+.sort a {
   text-decoration: none;
   color: grey;
   padding: 30px;
 }
 
-.sale{
+.sale {
   display: flex;
 }
-.salerow{
-padding: 0 50px;
+
+.salerow {
+  padding: 0 50px;
 }
 
-.saleitem{
+.saleitem {
   height: 330px;
   width: 230px;
   background-color: rgb(251, 251, 251);
@@ -362,46 +376,46 @@ padding: 0 50px;
   position: relative;
 }
 
-.sale-tag{
+.sale-tag {
   background-color: yellow;
   font-size: 12px;
   padding: 3px 8px;
   position: absolute;
 }
 
-.org-price{
+.org-price {
   color: rgb(120, 118, 118);
   font-size: 14px;
 }
 
-.portrait{
+.portrait {
   display: flex;
   justify-content: center;
   padding-bottom: 200px;
   /* background-color: red; */
 }
 
-.portvideo1{
-height: 530px;
-width: 300px;
-/* background-color: red; */
-/* border: 2px solid; */
-border-radius: 8px;
-margin: 10px;
-object-fit: contain;
-object-position: center;
-overflow: hidden;
+.portvideo1 {
+  height: 530px;
+  width: 300px;
+  /* background-color: red; */
+  /* border: 2px solid; */
+  border-radius: 8px;
+  margin: 10px;
+  object-fit: contain;
+  object-position: center;
+  overflow: hidden;
 }
 
-.portvideo1 video{
+.portvideo1 video {
   height: 100%;
   width: 100%;
 }
 
 /* SHOP BY COLOR */
 
-.shopbycolor{
-  margin:30px 0 ;
+.shopbycolor {
+  margin: 30px 0;
   width: 100%;
   height: fit-content;
   /* background-color: red; */
@@ -412,7 +426,7 @@ overflow: hidden;
   justify-content: end;
 }
 
-.end-bar a{
+.end-bar a {
   text-decoration: none;
   padding: 15px 30px;
   color: grey;
@@ -420,59 +434,86 @@ overflow: hidden;
 
 /* CELEBS SEEN WEARING ZAYDNS */
 
-.celeb{
+.celeb {
   height: 270px;
   width: 100%;
-  border: 1px solid;
   padding: 5px;
   overflow-x: hidden;
 }
 
-.actor-box{
+.actor-box {
   padding: 8px 0;
 }
 
-.work{
+.work {
   text-align: center;
   font-size: 13px;
   padding: 8px 0;
 }
 
-.actor-name{
+.actor-name {
   font-weight: bolder;
   text-align: center;
 }
 
-.circle img{
+.circle img {
   object-fit: fill;
   object-position: center;
 }
 
 /* ALL COLLECTIONS */
 
-.all-collection{
+.all-collection {
   min-height: 1000px;
   width: 100vw;
-  background-color: violet;
   margin: auto;
+  margin-top: 30px;
 }
 
-.collection{
- display: flex;
- justify-content: center;
- align-items: center;
+.collection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .collec {
   display: flex;
-  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.colbox {
+  height: 260px;
+  width: 290px;
+  margin: 10px 10px;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.pic{
+  height: 220px;
+  width: 290px;
+  /* border: 2px solid; */
+  
+}
+
+.nametag{
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.colbox .pic img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  object-position: center;
+  overflow: hidden;
+}
+
+.colbox .pic img:hover{
+  transform: scale(1.2);
+  
 }
 
 
-
-.colbox{
-  height: 150px;
-  width: 200px;
-  background-color: red;
-  border: 2px solid;
-}
