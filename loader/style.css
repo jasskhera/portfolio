@@ -1,5 +1,6 @@
 
 body {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,6 +9,7 @@ body {
 }
 
 .loader {
+    position: sticky;
     width: 100px;
     height: 100px;
     border: 8px solid #3498db;
