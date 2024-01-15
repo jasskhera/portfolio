@@ -51,6 +51,7 @@
             <li><a id="jsonloginform" target="_blank">jsonloginform</a></li>
             <li><a id="complexform" target="_blank">complexform</a></li>
             <li><a id="zaydn" target="_blank">zaydn</a></li>
+            <li><a id="responsivegrid" target="_blank">responsivegrid</a></li>
 		</ul>
 	</div>
 
@@ -71,6 +72,7 @@
 			var jsonloginformPageURL = baseURL + 'jsonloginform/loginform.html';
 			var complexformPageURL= baseURL + 'complexform/index.html';
 			var zaydnPageURL= baseURL + 'zaydn/index.html';
+			var responsivegridPageURL= baseURL + 'responsivegrid/responsivegrid.html';
 
 			// Get all <li> elements
 			var listItems = document.querySelectorAll('ul li');
@@ -104,6 +106,8 @@
 						document.querySelector('#complexform').setAttribute('href', complexformPageURL);
 						case 'zaydn':
 						document.querySelector('#zaydn').setAttribute('href', zaydnPageURL);
+						case 'responsivegrid':
+						document.querySelector('#responsivegrid').setAttribute('href', responsivegridPageURL);
 				}
 			});
 		</script>
