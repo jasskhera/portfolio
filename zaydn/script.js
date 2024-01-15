@@ -14,3 +14,10 @@ $('.slider').slick({
 $('#search-btn').click(function(){
   $('#search').slideToggle()
 })
+
+$(".slidetoggle").click(function () {
+  $(this).parent().children(".info").slideToggle()
+
+  $(this).children("i").toggleClass("fa-minus")
+  $(this).toggleClass("violet")
+})
