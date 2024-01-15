@@ -1,115 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Portfolio</title>
-		<style>
-			body{
-				margin: 0;
-				padding: 0;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-			div{
-				min-height: 500px;
-				width: 400px;
-				border: 2px solid;
-				border-radius: 5px;
-				margin: 50px;
-				padding-bottom:10px ;
-			}
-			h1{
-				text-align: center;
-				text-decoration: underline;
-			}
-			ul li{
-				display: flex;
-				justify-content: center;
-				padding: 5px;
-			}
-			ul li a{
-				text-decoration: none;
-				color: rgb(16, 93, 123);
-				font-size: 25px;
-			}
-		</style>
-	</head>
-	<body>
-		<div>
-		<h1 >All Projects</h1>
-		<ul>
-			<li><a id="loader" target="_blank">Loader</a></li>
-            <li><a id="test" target="_blank">test</a></li>
-            <li><a id="loginpage" target="_blank">loginpage</a></li>
-            <li><a id="portfolio" target="_blank">portfolio</a></li>
-            <li><a id="book" target="_blank">Book</a></li>
-            <li><a id="animatedloginform" target="_blank">animatedloginform</a></li>
-            <li><a id="table" target="_blank">table</a></li>
-            <li><a id="list" target="_blank">list</a></li>
-            <li><a id="jsonloginform" target="_blank">jsonloginform</a></li>
-            <li><a id="complexform" target="_blank">complexform</a></li>
-            <li><a id="zaydn" target="_blank">zaydn</a></li>
-            <li><a id="responsivegrid" target="_blank">responsivegrid</a></li>
-		</ul>
-	</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        /* min-height: 500px; */
+        /* width: 400px; */
+        /* border: 2px solid; */
+        /* border-radius: 5px; */
+        /* margin: 50px; */
+        /* padding-bottom: 10px; */
+      }
+      h1 {
+        text-align: center;
+        text-decoration: underline;
+      }
+      ul li {
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+      }
+      ul li a {
+        text-decoration: none;
+        color: rgb(16, 93, 123);
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>All Projects</h1>
+      <ul>
+        <li><a id="loader" target="_blank">Loader</a></li>
+        <li><a id="test" target="_blank">test</a></li>
+        <li><a id="loginpage" target="_blank">loginpage</a></li>
+        <li><a id="portfolio" target="_blank">portfolio</a></li>
+        <li><a id="book" target="_blank">Book</a></li>
+        <li><a id="animatedloginform" target="_blank">animatedloginform</a></li>
+        <li><a id="table" target="_blank">table</a></li>
+        <li><a id="list" target="_blank">list</a></li>
+        <li><a id="jsonloginform" target="_blank">jsonloginform</a></li>
+        <li><a id="complexform" target="_blank">complexform</a></li>
+        <li><a id="zaydn" target="_blank">zaydn</a></li>
+        <li><a id="responsivegrid" target="_blank">responsivegrid</a></li>
+      </ul>
+    </div>
 
-		<script>
-			var isDevelopment = true; // Change this to false for production
+    <script>
+      var isDevelopment = true; // Change this to false for production
 
-			var baseURL = isDevelopment ? '/portfolio/' : 'http://localhost:5500/';
+      var baseURL = isDevelopment ? "/portfolio/" : "http://localhost:5500/";
 
-			// Now you can use baseURL to construct your links
-			var loaderPageURL = baseURL + 'loader/index.html';
-			var testPageURL = baseURL + 'test/test.html';
-			var loginpagePageURL = baseURL + 'loginpage/loginpage.html';
-			var portfolioPageURL = baseURL + 'portfolio/index.html';
-			var bookPageURL = baseURL + 'book/book.html';
-			var animatedloginformPageURL = baseURL + 'animatedloginform/index.html';
-			var tablePageURL = baseURL + 'table/index.html';
-			var listPageURL = baseURL + 'list/list.html';
-			var jsonloginformPageURL = baseURL + 'jsonloginform/loginform.html';
-			var complexformPageURL= baseURL + 'complexform/index.html';
-			var zaydnPageURL= baseURL + 'zaydn/index.html';
-			var responsivegridPageURL= baseURL + 'responsivegrid/responsivegrid.html';
+      // Now you can use baseURL to construct your links
+      var loaderPageURL = baseURL + "loader/index.html";
+      var testPageURL = baseURL + "test/test.html";
+      var loginpagePageURL = baseURL + "loginpage/loginpage.html";
+      var portfolioPageURL = baseURL + "portfolio/index.html";
+      var bookPageURL = baseURL + "book/book.html";
+      var animatedloginformPageURL = baseURL + "animatedloginform/index.html";
+      var tablePageURL = baseURL + "table/index.html";
+      var listPageURL = baseURL + "list/list.html";
+      var jsonloginformPageURL = baseURL + "jsonloginform/loginform.html";
+      var complexformPageURL = baseURL + "complexform/index.html";
+      var zaydnPageURL = baseURL + "zaydn/index.html";
+      var responsivegridPageURL =
+        baseURL + "responsivegrid/responsivegrid.html";
 
-			// Get all <li> elements
-			var listItems = document.querySelectorAll('ul li');
+      // Get all <li> elements
+      var listItems = document.querySelectorAll("ul li");
 
-			// Iterate through each <li> element
-			listItems.forEach(function (li) {
-				// Find the <a> element inside the current <li>
-				var anchorElement = li.querySelector('a');
+      // Iterate through each <li> element
+      listItems.forEach(function (li) {
+        // Find the <a> element inside the current <li>
+        var anchorElement = li.querySelector("a");
 
-				// If an <a> element is found, update its href attribute
-				switch (anchorElement.id) {
-					case 'loader':
-						document.querySelector('#loader').setAttribute('href', loaderPageURL);
-					case 'test':
-						document.querySelector('#test').setAttribute('href', testPageURL);
-                        case 'loginpage':
-						document.querySelector('#loginpage').setAttribute('href', loginpagePageURL);
-						case 'portfolio':
-						document.querySelector('#portfolio').setAttribute('href', portfolioPageURL);
-						case 'book':
-						document.querySelector('#book').setAttribute('href', bookPageURL);
-						case 'animatedloginform':
-						document.querySelector('#animatedloginform').setAttribute('href', animatedloginformPageURL);
-						case 'table':
-						document.querySelector('#table').setAttribute('href', tablePageURL);
-						case 'list':
-						document.querySelector('#list').setAttribute('href', listPageURL);
-						case 'jsonloginform':
-						document.querySelector('#jsonloginform').setAttribute('href', jsonloginformPageURL);
-						case 'complexform':
-						document.querySelector('#complexform').setAttribute('href', complexformPageURL);
-						case 'zaydn':
-						document.querySelector('#zaydn').setAttribute('href', zaydnPageURL);
-						case 'responsivegrid':
-						document.querySelector('#responsivegrid').setAttribute('href', responsivegridPageURL);
-				}
-			});
-		</script>
-	</body>
+        // If an <a> element is found, update its href attribute
+        switch (anchorElement.id) {
+          case "loader":
+            document
+              .querySelector("#loader")
+              .setAttribute("href", loaderPageURL);
+          case "test":
+            document.querySelector("#test").setAttribute("href", testPageURL);
+          case "loginpage":
+            document
+              .querySelector("#loginpage")
+              .setAttribute("href", loginpagePageURL);
+          case "portfolio":
+            document
+              .querySelector("#portfolio")
+              .setAttribute("href", portfolioPageURL);
+          case "book":
+            document.querySelector("#book").setAttribute("href", bookPageURL);
+          case "animatedloginform":
+            document
+              .querySelector("#animatedloginform")
+              .setAttribute("href", animatedloginformPageURL);
+          case "table":
+            document.querySelector("#table").setAttribute("href", tablePageURL);
+          case "list":
+            document.querySelector("#list").setAttribute("href", listPageURL);
+          case "jsonloginform":
+            document
+              .querySelector("#jsonloginform")
+              .setAttribute("href", jsonloginformPageURL);
+          case "complexform":
+            document
+              .querySelector("#complexform")
+              .setAttribute("href", complexformPageURL);
+          case "zaydn":
+            document.querySelector("#zaydn").setAttribute("href", zaydnPageURL);
+          case "responsivegrid":
+            document
+              .querySelector("#responsivegrid")
+              .setAttribute("href", responsivegridPageURL);
+        }
+      });
+    </script>
+  </body>
 </html>
