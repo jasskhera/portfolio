@@ -52,6 +52,7 @@
         <li><a id="complexform" target="_blank">complexform</a></li>
         <li><a id="zaydn" target="_blank">zaydn</a></li>
         <li><a id="responsivegrid" target="_blank">responsivegrid</a></li>
+        <li><a id="parallax" target="_blank">parallax</a></li>
       </ul>
     </div>
 
@@ -74,6 +75,8 @@
       var zaydnPageURL = baseURL + "zaydn/index.html";
       var responsivegridPageURL =
         baseURL + "responsivegrid/responsivegrid.html";
+      var parallaxPageURL =
+        baseURL + "parallax/parallax.html";
 
       // Get all <li> elements
       var listItems = document.querySelectorAll("ul li");
@@ -123,6 +126,10 @@
             document
               .querySelector("#responsivegrid")
               .setAttribute("href", responsivegridPageURL);
+          case "parallax":
+            document
+              .querySelector("#parallax")
+              .setAttribute("href", parallaxPageURL);
         }
       });
     </script>
