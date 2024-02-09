@@ -12,14 +12,14 @@
         justify-content: center;
         align-items: center;
       }
-      div {
-        /* min-height: 500px; */
-        /* width: 400px; */
-        /* border: 2px solid; */
-        /* border-radius: 5px; */
-        /* margin: 50px; */
-        /* padding-bottom: 10px; */
-      }
+      /* div {
+        min-height: 500px;
+        width: 400px;
+        border: 2px solid;
+        border-radius: 5px;
+        margin: 50px;
+        padding-bottom: 10px;
+      } */
       h1 {
         text-align: center;
         text-decoration: underline;
@@ -53,6 +53,7 @@
         <li><a id="zaydn" target="_blank">zaydn</a></li>
         <li><a id="responsivegrid" target="_blank">responsivegrid</a></li>
         <li><a id="parallax" target="_blank">parallax</a></li>
+        <li><a id="assignment9_02" target="_blank">assignment9_02</a></li>
       </ul>
     </div>
 
@@ -77,6 +78,8 @@
         baseURL + "responsivegrid/responsivegrid.html";
       var parallaxPageURL =
         baseURL + "parallax/parallax.html";
+      var assignment9_02PageURL =
+        baseURL + "assignment9_02/index.html";
 
       // Get all <li> elements
       var listItems = document.querySelectorAll("ul li");
@@ -130,6 +133,10 @@
             document
               .querySelector("#parallax")
               .setAttribute("href", parallaxPageURL);
+          case "assignment9_02":
+            document
+              .querySelector("#assignment9_02")
+              .setAttribute("href", assignment9_02PageURL);
         }
       });
     </script>
