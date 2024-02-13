@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            height: 50px;
+            background-color: #76c034;
+            font-size: 20px;
+            
+        }
+        .container ul li{
+            display: inline-block;
+            padding: 10px 20px;
+            transition: 500ms;
+        }
+        .container ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        .container ul li a:hover{
+            text-decoration: underline;
+            color: #000;
+            transition: all 500ms;
+        }
+        .container .cta a{
+            border: 2px solid white;
+            padding: 5px 10px;
+            border-radius: 15px;
+        }
+        .container .cta a:hover{
+            color: black;
+            text-decoration: none;
+            border: 2px solid black;
+            transition: all 500ms;
+        }
+        .lists{
+            margin: auto;
+            width: 800px;
+            margin-top: 30px;
+            border: 1px solid grey;
+            padding: 10px 30px;
+        }
+        h3{
+            font-size: 25px;
+            padding-bottom: 20px;
+        }
+        .lists ul li{
+            list-style: square;
+            color: #211951;
+            padding: 10px 0px;
+        }
+        .table{
+            width: 800px;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+        .difference{
+            font-weight: 600;
+        }
+        table, tr, th, td{
+            border: 1px solid rgba(128, 128, 128, 0.566);
+            border-collapse: collapse;
+            padding: 5px 20px;
+        }
+        table td a{
+            text-decoration: none;
+            color: blue;
+        }
+        table td a:hover{
+            color: red;
+        }
+        .comparison{
+            width: 1000px;
+            margin: auto;
+            margin-top: 30px;
+            margin-bottom: 80px;
+        }
+        .comparison table{
+           border: none; 
+        }
+        .comparison tr{
+           border: none;
+        }
+        .comparison td{
+            border: none;
+            padding: 8px 10px;
+            text-align: center;
+        }
+        .comparison th{
+            border: none;
+        }
+        .bg-color{
+            background-color: rgba(128, 128, 128, 0.067);
+        }
+        .sm-text{
+            font-size: 12px;
+        }
+        .headers{
+            font-size: 23px;
+            font-weight: 500;
+        }
+        .compare-heading{
+            width: 350px;
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+        .footer{
+            background-color: #F0F3FF;
+        }
+        .footer ul li{
+            display: inline-block;
+            padding: 30px 40px;
+            
+        }
+        .footer ul li a{
+            text-decoration: none;
+            color: rgb(113, 110, 110);
+        }
+        .footer ul li a:hover{
+            color: #15F5BA;
+        }
+        span{
+            border: 0.5px solid rgb(13, 12, 12);
+            padding: 0 6px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .setup{
+            width: 600px;
+            margin: auto;
+        }
+        .items{
+            padding: 15px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li class="cta"><a href="">BUY NOW</a></li>
+        </ul>
+    </div>
+    <div class="lists">
+        <h3>What Are the Best Programming Languages to Learn in 2024?</h3>
+        <ul>
+            
+                <li><strong>Javascript</strong> (JavaScript is a high-level programming language that is one of the core technologies of the World Wide Web.)</li>
+                <li><strong>Python</strong> (Python is one of the most popular programming languages today and is easy for beginners to learn because of its readability.)</li>
+                <li><strong>Go</strong> (Go was developed by Google in 2007 for APIs and web applications. Go has recently become one of the fastest-growing programming languages due to its simplicity, as well as its ability to handle multicore and networked systems and massive codebases.)</li>
+                <li><strong>Java</strong> (Java is one of the most popular programming languages used today. )</li>
+                <li><strong>Kotlin</strong> (Kotlin is a general-purpose programming language originally developed and unveiled as Project Kotlin by JetBrains in 2011.)</li>
+                
+        </ul>
+    </div>
+
+    <!------------------------------------------- Table ----------------------------------------------->
+
+    <div class="table">
+        <h3>Difference between Java and Javascript</h3>
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Java</th>
+                <th>JavaScript</th>
+            </tr>
+            <tr>
+                <td class="difference">
+                    Developed By	
+                </td>
+                <td>Java is an Object-Oriented language developed by <a href="https://en.wikipedia.org/wiki/James_Gosling">James Gosling</a> from Sun Microsystems</td>
+                <td>Javascript, originally called LiveScript, was developed by <a href="https://en.wikipedia.org/wiki/Netscape">NetScape</a>.</td>
+            </tr>
+            <tr>
+                <td class="difference">Working</td>
+                <td>Java is a standalone programming language that is executed on JVM (Java Virtual Machine) by converting the source code into the byte code.</td>
+                <td>JavaScript is a scripting language that needs to be placed inside the HTML document and executed or run on the web browsers like Chrome, Firefox, etc.</td>
+            </tr>
+            <tr>
+                <td class="difference">Language Type</td>
+                <td>Java is a class-based object oriented programming language.</td>
+                <td>JavaScript is a prototype-based scripting language.</td>
+            </tr>
+            <tr>
+                <td class="difference">Object Type</td>
+                <td>Java as a class-based language creates objects after defining a class.</td>
+                <td>JavaScript objects are prototype-based that creates objects based on a single prototype object.</td>
+            </tr>
+            <tr>
+                <td class="difference">Variable Declaration</td>
+                <td>Java supports static typing which requires variable and type declaration before the compilation and execution.</td>
+                <td>JavaScript supports dynamic typing where the type and the variable can be defined anytime in the program. For example, you do not have to define variable ‘c’ type (integer, float, etc) during compile type. You could do that even during the run-time as well.</td>
+            </tr>
+            <tr>
+                <td class="difference">Concurrency
+                    (the function of handling different instructions at the same time)</td>
+                    <td>Java supports and ensures concurrency using multi-threading that makes the program faster and efficient.</td>
+                    <td>JavaScript does not support concurrency or multiple events at the same time.</td>
+            </tr>
+            <tr>
+                <td class="difference">Compilation and Interpretation</td>
+                <td>Java is compiled as well as interpreted. It is compiled into a byte code and interpreted on a JVM.</td>
+                <td>JavaScript is interpreted only on the web browser directly.</td>
+            </tr>
+            <tr>
+                <td class="difference">Source Code Visibility</td>
+                <td>In Java, the source code is hidden, in the form of byte code that cannot be read by unauthorized or third party users.</td>
+                <td>Javascript as a scripting language runs code on a browser which is visible in plain text to everyone.</td>
+            </tr>
+            <tr>
+                <td class="difference">Requirements</td>
+                <td>To develop and run a Java Program, you need the entire <a href="https://www.oracle.com/java/technologies/javase/jdk-jdk-7-readme.html#:~:text=The%20JDK%20is%20a%20development,running%20on%20the%20Java%20platform.">Java Development Kit (JDK)</a>.</td>
+                <td>JavaScript only requires a text editor to write the code.</td>
+            </tr>
+            <tr>
+                <td class="difference">Syntax</td>
+                <td>Data types in Java need to be declared.</td>
+                <td>Data Types in JavaScript do not need to be declared.</td>
+            </tr>
+            <tr>
+                <td class="difference">Security</td>
+                <td>Java is created keeping in mind the primary motive of keeping the source code secured. And it provides robust features to support that.</td>
+                <td>JavaScript’s source code is not essentially secure with plain text visibility to everyone. Programmers need to add functions for tight security.</td>
+            </tr>
+            <tr>
+                <td class="difference">File Extension</td>
+                <td>Java supports the file extension “.Java”</td>
+                <td>JavaScript supports the file extension “.JavaScript”</td>
+            </tr>
+            <tr>
+                <td class="difference">Suitability</td>
+                <td>Java can be used for several types of application development including:
+                    <br>
+                    • Mobile application development<br>
+                    • Cloud-based Applications<br>
+                    • Big Data Technologies<br>
+                    • Web-Based Applications<br>
+                    IoT Applications</td>
+                <td>JavaScript is primarily used for front-side development but with the latest updates and introduction of <a href="https://www.w3schools.com/nodejs/nodejs_intro.asp">Node</a>. JavaScript could be used for building web and server applications, game development, web and mobile application development.</td>
+            </tr>
+            <tr>
+                <td class="difference">Key Features</td>
+                <td>• Extensive Libraries<br>
+                    • Simple and Easy to Learn<br>
+                    • Popular</td>
+                <td>• Lightweight<br>
+                    • Powerful frameworks<br>
+                    • Great for front-end development</td>
+            </tr>
+            <tr>
+                <td class="difference">Companies Using</td>
+                <td>Netflix, Google, Airbnb, etc.</td>
+                <td>Paypal, Uber, Microsoft, etc.</td>
+            </tr>
+            
+        </table>
+    </div>
+    <hr>
+    <!--------------------------------- Plan Comparison ----------------------------------->
+    <div class="comparison">
+       <div class="compare-heading">
+        <h2>Compare our plans and find yours.</h2>
+    </div>
+        <table>
+            <tr>
+                <th class="headers"></th>
+                <th class="headers">Meteroid</th>
+                <th class="headers">Asteroid</th>
+                <th class="headers">Moon</th>
+                <th class="headers">Planet</th>
+                <th class="headers">Enterprise</th>
+            </tr>
+            <tr>
+                <td class="sm-text">CHAT</td>
+                <td class="sm-text"></td>
+                <td class="sm-text"></td>
+                <td class="sm-text"></td>
+                <td class="sm-text"></td>
+                <td class="sm-text"></td>
+            </tr>
+            <tr>
+                <td class="bg-color align">One-on-one Private Chat</td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td class="align">Group Text Conference (Private, Public & Password Protected)</td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td class="bg-color align">UI Kit (with Code)</td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td class="align">Users & Friends List</td>
+                <td></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td class="bg-color align">Users & Friends Presence</td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td class="align">Typing Indicators</td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td class="bg-color align">Read Receipts</td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td class="align">Text & Custom Structured Messaging</td>
+                <td></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td class="bg-color align">Share Files & Multimedia</td>
+                <td class="bg-color"></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td class="align">Moderators & Ability to Kick/Ban Users</td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td class="bg-color align">Chat History</td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td class="align">Unread Message Count</td>
+                <td></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check" aria-hidden="true"></i></td>
+            </tr>
+            <tr>
+                <td class="bg-color align">Users, Groups & Messages Search</td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+                <td class="bg-color"><i class="fa fa-check" aria-hidden="true"></i></td>
+            </tr>
+        </table>
+    </div>
+    <div class="setup">
+        <h3>Steps For Git Installation on Windows 10</h3>
+       <div class="items"><span>1</span>Download and install Git</div>
+       <div class="items"><span>2</span>Git bash interface</div>
+        <div class="items"><span>3</span>Basic Git commands</div>
+        <div class="items"><span>4</span>Create a local repository</div>
+        <div class="items"><span>5</span>Connect to the remote repository</div>
+        <div class="items"><span>6</span>Push the file to GitHub</div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li><a href="">PRODUCT</a></li>
+            <li><a href="">COMPANY</a></li>
+            <li><a href="">ACCOUNT</a></li>
+            <li><a href="">HELP</a></li>
+        </ul>
+    </div>
+</body>
+</html>
