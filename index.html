@@ -55,6 +55,7 @@
         <li><a id="parallax" target="_blank">parallax</a></li>
         <li><a id="assignment9_02" target="_blank">assignment9_02</a></li>
         <li><a id="assignment12_02" target="_blank">assignment12_02</a></li>
+        <li><a id="assignment17_02" target="_blank">assignment17_02</a></li>
       </ul>
     </div>
 
@@ -80,6 +81,7 @@
       var parallaxPageURL = baseURL + "parallax/parallax.html";
       var assignment9_02PageURL = baseURL + "assignment9_02/index.html";
       var assignment12_02PageURL = baseURL + "assignment12_02/index.html";
+      var assignment12_02PageURL = baseURL + "assignment17_02/index.html";
 
       // Get all <li> elements
       var listItems = document.querySelectorAll("ul li");
@@ -141,6 +143,10 @@
             document
               .querySelector("#assignment12_02")
               .setAttribute("href", assignment12_02PageURL);
+          case "assignment17_02":
+            document
+              .querySelector("#assignment17_02")
+              .setAttribute("href", assignment17_02PageURL);
         }
       });
     </script>
