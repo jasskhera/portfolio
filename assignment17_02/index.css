@@ -281,3 +281,66 @@ ul li a {
   font-weight: 500;
   text-align: center;
 }
+
+/* FIXED BUTTON */
+
+.fixed{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+
+.fixed img{
+  height: 50px;
+}
+
+/* Matter */
+
+.sticky{
+  min-height: 650px;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  margin-top: 50px;
+  background-color: whitesmoke;
+}
+
+.matter p{
+  width: 550px;
+  font-size: 20px;
+}
+
+.stickyimage{
+  height: 300px;
+  width: 300px;
+  position: sticky;
+  right: 50px;
+  top: 0;
+  margin-left: 20px;
+}
+
+.stickyimage img{
+  width: 100%;
+}
+.matterimages{
+  display: flex;
+}
+.matterimage{
+  height: 150px;
+  width: 200px;
+  padding: 20px;
+  
+}
+.matterimage img{
+  height: 100%;
+  width: 100%;
+  
+}
+.stickyimage .layer{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #afbdf079;
+}
