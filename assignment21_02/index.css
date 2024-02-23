@@ -93,14 +93,29 @@ h2{
 .icons{
     padding-top: 20px;
     width: 400px;
+    height: 150px;
     margin: auto;
     color: gray;
+    display: flex;
+}
+.fa{
+    padding-right: 10px;
 }
 .icons p{
-    font-size: 50px;
+    font-size: 70px;
+    margin: 0;
 }
 .icons h2{
     margin: 0;
+}
+.icons2{
+    height: 50px;
+    width: 250px;
+    font-size: 35px;
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    padding: 0 20px;
 }
 .magnesium .right-content{
     height: 350px;
