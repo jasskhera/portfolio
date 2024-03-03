@@ -57,6 +57,7 @@
         <li><a id="assignment12_02" target="_blank">assignment12_02</a></li>
         <li><a id="assignment17_02" target="_blank">assignment17_02</a></li>
         <li><a id="assignment21_02" target="_blank">assignment21_02</a></li>
+        <li><a id="randomcolor" target="_blank">randomcolor</a></li>
       </ul>
     </div>
 
@@ -84,6 +85,7 @@
       var assignment12_02PageURL = baseURL + "assignment12_02/index.html";
       var assignment17_02PageURL = baseURL + "assignment17_02/index.html";
       var assignment21_02PageURL = baseURL + "assignment21_02/index.html";
+      var randomcolorPageURL = baseURL + "randomcolor/index.html";
 
       // Get all <li> elements
       var listItems = document.querySelectorAll("ul li");
@@ -153,6 +155,10 @@
             document
               .querySelector("#assignment21_02")
               .setAttribute("href", assignment21_02PageURL);
+          case "randomcolor":
+            document
+              .querySelector("#randomcolor")
+              .setAttribute("href", randomcolorPageURL);
         }
       });
     </script>
