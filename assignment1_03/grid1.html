@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid1</title>
+    <style>
+      .container {
+        width: 900px;
+        height: 600px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+      }
+      .boxx {
+        background-color: rgb(207, 113, 6);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .boxy {
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+      .box2 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+      }
+      .box5 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+      }
+      .box6 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="boxx box1">1</div>
+      <div class="boxx box2">2</div>
+      <div class="boxx box3">3</div>
+      <div class="boxx box4">4</div>
+      <div class="boxy box5">5</div>
+      <div class="boxy box6">6</div>
+      <div class="boxy box7">7</div>
+      <div class="boxy box8">8</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout 7</title>
+    <style>
+        .container{
+            width: 900px;
+            height: 500px;
+            display: grid;
+            gap: 10px;
+            grid-template-columns:(1fr,8);
+            grid-template-rows: (1fr,6);
+        }
+        .box1{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            background-color: #01bfa5;
+        }
+        .box2{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-color: #8c6e62;
+        }
+        .box3{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-color: #aa00ff;
+        }
+        .box4{
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-color: #00b5d8;
+        }
+        .box5{
+            grid-column-start: 6;
+            grid-column-end: 9;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            background-color: #9e9e24;
+        }
+        .box6{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            background-color: #d50004;
+        }
+        .box7{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            background-color: #e6ee9b;
+        }
+        .box8{
+            grid-column-start: 5;
+            grid-column-end: 6;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            background-color: #ff7143;
+        }
+        .box9{
+            grid-column-start: 6;
+            grid-column-end: 7;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            background-color: #ddedc8;
+        }
+        .box10{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            background-color: #00b8d4;
+        }
+        .box11{
+            grid-column-start:4 ;
+            grid-column-end:5 ;
+            grid-row-start:4;
+            grid-row-end: 5;
+            background-color: #76ff02;
+        }
+        .box12{
+            grid-column-start:5 ;
+            grid-column-end:6;
+            grid-row-start:4;
+            grid-row-end: 6;
+            background-color: #6200e9;
+        }
+        .box13{
+            grid-column-start:6 ;
+            grid-column-end:8;
+            grid-row-start:4;
+            grid-row-end: 5;
+            background-color: #ff9e81;
+        }
+        .box14{
+            grid-column-start:8 ;
+            grid-column-end:9;
+            grid-row-start:4;
+            grid-row-end: 5;
+            background-color: #82b1ff;
+        }
+        .box15{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 5;
+            grid-row-end: 6;
+            background-color: #cf93d9;
+        }
+        .box16{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 5;
+            grid-row-end: 6;
+            background-color: #cfd8dd;
+        }
+        .box17{
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 5;
+            grid-row-end: 6;
+            background-color: #0098a6;
+        }
+        .box18{
+            grid-column-start: 6;
+            grid-column-end: 7;
+            grid-row-start: 5;
+            grid-row-end: 6;
+            background-color: #dde776;
+        }
+        .box19{
+            grid-column-start: 7;
+            grid-column-end: 8;
+            grid-row-start: 5;
+            grid-row-end: 6;
+            background-color: #e57373;
+        }
+        .box20{
+            grid-column-start: 8;
+            grid-column-end: 9;
+            grid-row-start: 5;
+            grid-row-end: 7;
+            background-color: #2962ff;
+        }
+        .box21{
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 6;
+            grid-row-end: 7;
+            background-color: #da1b61;
+        }
+        .box22{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 6;
+            grid-row-end: 7;
+            background-color: #e2f2ff;
+        }
+        .box23{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 6;
+            grid-row-end: 7;
+            background-color: #663bb6;
+        }
+        .box24{
+            grid-column-start: 4;
+            grid-column-end: 6;
+            grid-row-start: 6;
+            grid-row-end: 7;
+            background-color: #e57373;
+        }
+        .box25{
+            grid-column-start: 6;
+            grid-column-end: 7;
+            grid-row-start: 6;
+            grid-row-end: 7;
+            background-color: #ff6d00;
+        }
+        .box26{
+            grid-column-start: 7;
+            grid-column-end: 8;
+            grid-row-start: 6;
+            grid-row-end: 7;
+            background-color: #1c5e20;
+        }
+
+        
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+        <div class="box box9">9</div>
+        <div class="box box10">10</div>
+        <div class="box box11">11</div>
+        <div class="box box12">12</div>
+        <div class="box box13">13</div>
+        <div class="box box14">14</div>
+        <div class="box box15">15</div>
+        <div class="box box16">16</div>
+        <div class="box box17">17</div>
+        <div class="box box18">18</div>
+        <div class="box box19">19</div>
+        <div class="box box20">20</div>
+        <div class="box box21">21</div>
+        <div class="box box22">22</div>
+        <div class="box box23">23</div>
+        <div class="box box24">24</div>
+        <div class="box box25">25</div>
+        <div class="box box26">26</div>
+    </div>
+</body>
+</html>
