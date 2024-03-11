@@ -544,8 +544,8 @@ li:hover a::before {
 }
 
 .colbox .pic {
-  height: 85%;
-  width: 100%;
+  width: 290px;
+  height: 222px;
   object-fit: contain;
   /* object-position: center; */
   overflow: hidden;
