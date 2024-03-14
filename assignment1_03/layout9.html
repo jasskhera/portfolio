@@ -1,14 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout 9</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <style>
-        
+      :root {
+        --violet: rgb(88, 16, 161);
+        --green: #4caf50;
+        --red: rgb(243, 89, 89);
+        --blue: rgb(74, 167, 205);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        width: 1050px;
+        min-height: 500px;
+
+        margin: auto;
+
+        display: flex;
+        gap: 15px;
+      }
+      .item {
+        flex: 1;
+      }
+
+      .bg-violet {
+        background-color: var(--violet);
+      }
+      .bg-green {
+        background-color: var(--green);
+      }
+      .bg-red {
+        background-color: var(--red);
+      }
+      .bg-blue {
+        background-color: var(--blue);
+      }
+
+      .content {
+        border-radius: 6px;
+      }
+
+      .row {
+        display: flex;
+        gap: 15px;
+      }
+      .col-1 {
+        flex: 1;
+      }
     </style>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+        <div
+          class="content bg-violet"
+          style="height: 200px; margin-bottom: 15px"
+        ></div>
+        <div class="row" style="height: 200px; margin-bottom: 15px">
+          <div class="col-1">
+            <div class="content bg-green" style="height: 100%"></div>
+          </div>
+          <div class="col-1">
+            <div
+              class="content bg-blue"
+              style="height: 50px; margin-bottom: 15px"
+            ></div>
+            <div class="content bg-red" style="height: 135px"></div>
+          </div>
+        </div>
+        <div class="content bg-green" style="height: 100px"></div>
+      </div>
+
+      <div class="item">
+        <div class="row" style="height: 360px; margin-bottom: 15px">
+          <div class="col-1">
+            <div class="content bg-green" style="height: 100%"></div>
+          </div>
+          <div class="col-1">
+            <div
+              class="content bg-blue"
+              style="height: 100px; margin-bottom: 15px"
+            ></div>
+            <div class="content bg-red" style="height: 245px"></div>
+          </div>
+        </div>
+        <div class="content bg-violet" style="height: 155px"></div>
+      </div>
+
+      <div class="item">
+        <div
+          class="content bg-green"
+          style="height: 100px; margin-bottom: 15px"
+        ></div>
+
+        <div class="row" style="height: 100px; margin-bottom: 15px">
+          <div class="col-1" style="flex: 1">
+            <div class="content bg-green" style="height: 100%"></div>
+          </div>
+          <div class="col-1" style="flex: 3">
+            <div
+              class="content bg-blue"
+              style="height: 100px; margin-bottom: 15px"
+            ></div>
+          </div>
+        </div>
+
+        <div
+          class="content bg-violet"
+          style="height: 230px; margin-bottom: 15px"
+        ></div>
+        <div class="content bg-blue" style="height: 55px"></div>
+      </div>
+    </div>
+  </body>
 </html>

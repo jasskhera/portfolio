@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --gap:15px;
+            --radius:8px;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            max-width: 1000px;
+            min-height: 600px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 3fr 1fr 2fr;
+            grid-template-rows:1fr;
+
+            gap: var(--gap);
+        }
+        .item1{
+            background-color: rgb(251, 251, 251);
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+
+            gap: var(--gap);;
+        }
+
+        .item1_item{
+            background-color: hotpink;
+            border-radius: var(--radius);
+        }
+        .i2{
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        .i3{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .i4{
+            grid-row-start: 2;
+            grid-row-end: 5;
+
+            grid-column-start: 3;
+            grid-column-end: 4;
+
+            background-color: white;
+
+            display: grid;
+            gap: var(--gap);;
+            
+        }
+        .i4_item{
+            background-color: hotpink;
+            border-radius: var(--radius);
+        }
+        .i5{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+
+
+
+        .item2{
+            display: grid;
+            gap: var(--gap);;
+
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+        .item2_item{
+            background-color: hotpink;
+            border-radius: var(--radius);;
+        }
+        .a1{
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+
+        .item3{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+
+            gap: var(--gap);
+
+        }
+
+        .item3_item{
+            background-color: hotpink;
+            border-radius: var(--radius);
+        }
+        .b1{
+            grid-row: 1 /span 2;
+        }
+        .b3{
+            grid-row: 3 /span 2;
+            grid-column:1 /span 2;
+          
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1">
+            <div class="item1_item i1"></div>
+            <div class="item1_item i2"></div>
+            <div class="item1_item i3"></div>
+            <div class="item1_item i4">
+                <div class="i4_item"></div>
+                <div class="i4_item"></div>
+            </div>
+            <div class="item1_item i5"></div>
+            <div class="item1_item"></div>
+        </div>
+        <div class="item item2">
+            <div class="item2_item a1">
+                
+            </div>
+            <div class="item2_item">
+
+            </div>
+        </div>
+        <div class="item item3">
+                <div class="item3_item b1"></div>
+                <div class="item3_item b2"></div>
+                <div class="item3_item b3"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
