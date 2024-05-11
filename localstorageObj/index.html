@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <title>Object store in localStorage</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 780px;
+        margin: 50px;
+        padding: 30px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input
+        type="text"
+        id="name"
+        class="form-control mb-3"
+        placeholder="Enter Name"
+      />
+      <input
+        type="email"
+        id="email"
+        class="form-control mb-3"
+        placeholder="Enter Email"
+      />
+      <input
+        type="phone"
+        id="phone"
+        class="form-control mb-3"
+        placeholder="Enter Phone Number"
+      />
+      <select name="courses" id="courses" class="d-block">
+        <option value="">Select</option>
+        <option value="BSc">BSc</option>
+        <option value="B Tech">B Tech</option>
+        <option value="B Com">B Com</option>
+      </select>
+      <button class="btn btn-success mt-3" onclick="AddTask()">Submit</button>
+
+      <hr />
+
+      <table class="table table-striped-columns">
+        <thead>
+          <tr>
+            <th>S. No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Course</th>
+            <th>Button</th>
+          </tr>
+        </thead>
+        <tbody id="list"></tbody>
+      </table>
+    </div>
+
+    <script>
+      let tasks;
+      if (localStorage.getItem("tasks", tasks)) {
+        let l = localStorage.getItem("tasks", tasks);
+        tasks = JSON.parse(l);
+      } else {
+        tasks = [];
+      }
+
+      function reload(){
+        location.reload()
+      }
+
+      function AddTask() {
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let phone = document.getElementById("phone");
+        let courses = document.getElementById("courses");
+
+        let obj = {
+          name: name.value,
+          email: email.value,
+          phone: phone.value,
+          courses: courses.value,
+        };
+
+        tasks.push(obj);
+
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+
+        Display();
+        reload()
+        
+        name.value = ''
+        email.value = ''
+        phone.value = ''
+        courses.value = ''
+      }
+      Display();
+
+      function Display() {
+        let S_no = 1;
+        let tr = document.getElementById("list");
+        tr.innerHTML = "";
+        tasks.forEach((element, index) => {
+          tr.innerHTML += `
+                <tr>
+                    <td>${S_no}</td>
+                    <td>${element.name}</td>
+                    <td>${element.email}</td>
+                    <td>${element.phone}</td>
+                    <td>${element.courses}</td>
+                    <td><button class="btn btn-danger bttn" data-index="${index}">X</button> 
+                        </tr>
+                `;
+          S_no++;
+        });
+      }
+
+      let deletebtn = document.querySelectorAll(".bttn")
+
+      deletebtn.forEach(function(item){
+        item.addEventListener('click',deleteTask)
+      })
+
+      function deleteTask(){
+        let index = this.getAttribute('data-index')
+
+        tasks.splice(index,1)
+
+        localStorage.setItem('tasks', JSON.stringify(tasks))
+        reload()
+        Display()
+      }
+    </script>
+  </body>
+</html>

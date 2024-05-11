@@ -59,6 +59,7 @@
         <li><a id="assignment21_02" target="_blank">assignment21_02</a></li>
         <li><a id="assignment1_03" target="_blank">assignment1_03</a></li>
         <li><a id="randomcolor" target="_blank">randomcolor</a></li>
+        <li><a id="localstorageObj" target="_blank">localstorageObject</a></li>
       </ul>
     </div>
 
@@ -88,6 +89,7 @@
       var assignment21_02PageURL = baseURL + "assignment21_02/index.html";
       var assignment1_03PageURL = baseURL + "assignment1_03/index.html";
       var randomcolorPageURL = baseURL + "randomcolor/index.html";
+      var localstorageObjPageURL = baseURL + "localstorageObj/index.html";
 
       // Get all <li> elements
       var listItems = document.querySelectorAll("ul li");
@@ -165,6 +167,10 @@
             document
               .querySelector("#assignment1_03")
               .setAttribute("href", assignment1_03PageURL);
+          case "localstorageObj":
+            document
+              .querySelector("#localstorageObj")
+              .setAttribute("href", localstorageObjPageURL);
         }
       });
     </script>
