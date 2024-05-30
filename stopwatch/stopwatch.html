@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        color: white;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        padding: 20px;
+        border: 1px solid;
+        border-radius: 20px;
+        margin: 20px;
+      }
+      .millisecond {
+        display: contents;
+        font-size: 50px;
+      }
+      button{
+        padding: 20px 30px;
+        border: none;
+        border-radius: 30%;
+        font-size: 30px;
+        color: white;
+      }
+      #start{
+        background-color: green;
+      }
+      #stop{
+        background-color: red;
+      }
+      #reset{
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hour">00</div>
+      <span>:</span>
+      <div class="minute">00</div>
+      <span>:</span>
+      <div class="second">00</div>
+      <span>:</span>
+      <div class="millisecond">00</div>
+    </div>
+    <div class="buttons">
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+      <button id="reset">Reset</button>
+    </div>
+
+    <script>
+      let intervalID;
+
+      let h = 0;
+      let m = 0;
+      let s = 0;
+      let ms = 0;
+
+      let hour = document.querySelector(".hour");
+      let minute = document.querySelector(".minute");
+      let second = document.querySelector(".second");
+      let millisecond = document.querySelector(".millisecond");
+
+      function displayStopwatch() {
+        hour.innerHTML = h.toString().padStart(2, "0");
+        minute.innerHTML = m.toString().padStart(2, "0");
+        second.innerHTML = s.toString().padStart(2, "0");
+        millisecond.innerHTML = ms.toString().padStart(3, "0");
+      }
+
+      function countdown() {
+        ms += 10;
+        if (ms == 1000) {
+          s++;
+          ms = 0;
+        }
+        if (s == 60) {
+          m++;
+          ms = 0;
+          s = 0;
+        }
+        if (m == 60) {
+          h++;
+          ms = 0;
+          s = 0;
+          m = 0;
+        }
+        displayStopwatch();
+      }
+
+      let start = document.querySelector("#start");
+      start.addEventListener("click", function () {
+        clearInterval(intervalID);
+        intervalID = setInterval(countdown, 10);
+      });
+
+      let stopper = document.querySelector("#stop");
+      stopper.addEventListener("click", function () {
+        clearInterval(intervalID);
+      });
+
+      let reset = document.querySelector('#reset')
+      reset.addEventListener('click', function(){
+        clearInterval(intervalID);
+        ms = 0
+        s = 0
+        m = 0
+        h = 0
+        displayStopwatch()
+      })
+
+      displayStopwatch();
+    </script>
+  </body>
+</html>
