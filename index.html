@@ -62,6 +62,7 @@
         <li><a id="localstorageObj" target="_blank">localstorageObject</a></li>
         <li><a id="stopwatch" target="_blank">stopwatch</a></li>
         <li><a id="timer" target="_blank">timer</a></li>
+        <li><a id="modal" target="_blank">modal</a></li>
       </ul>
     </div>
 
@@ -94,6 +95,7 @@
       var localstorageObjPageURL = baseURL + "localstorageObj/index.html";
       var stopwatchPageURL = baseURL + "stopwatch/stopwatch.html";
       var timerPageURL = baseURL + "timer/timer.html";
+      var modalPageURL = baseURL + "modal/index.html";
 
       // Get all <li> elements
       var listItems = document.querySelectorAll("ul li");
@@ -183,6 +185,10 @@
             document
               .querySelector("#timer")
               .setAttribute("href", timerPageURL);
+          case "modal":
+            document
+              .querySelector("#modal")
+              .setAttribute("href", modalPageURL);
         }
       });
     </script>

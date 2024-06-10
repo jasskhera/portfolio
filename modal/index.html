@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        height: 100vh;
+        background: url(bg.jpg);
+        background-size: cover;
+      }
+      .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.396);
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
+      .dialogue {
+        height: 300px;
+        width: 600px;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 10px 9px 5px 8px rgba(25, 28, 29, 0.501);
+      }
+      h4,
+      p {
+        padding-bottom: 20px;
+      }
+      .buttons {
+        gap: 20px;
+        justify-content: center;
+        display: flex;
+      }
+      button {
+        padding: 8px 15px;
+        border-radius: 10px;
+        border: none;
+        color: white;
+      }
+      .left {
+        background-color: #4caf50;
+      }
+      .right {
+        background-color: red;
+      }
+      .open {
+        display: flex;
+      }
+      .cookie{
+        background-color: rgb(10, 93, 93);
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="cookie">Open Cookies</button>
+    <div class="container">
+      <div class="dialogue">
+        <h4>Cookie Policy</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolores
+          corporis ex tenetur ratione aspernatur consectetur architecto
+          voluptatem. Exercitationem provident suscipit accusamus? Odit libero
+          quis consequuntur officia exercitationem, architecto quasi vel
+          corporis eius iure veritatis blanditiis nam animi amet, ut recusandae?
+          Voluptatibus in possimus magnam!
+        </p>
+        <div class="buttons">
+          <button class="left" onclick="accept()">Accept</button>
+          <button class="right" onclick="reject()">Reject</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let lc;
+      let container = document.querySelector(".container");
+      let cookie = document.querySelector('.cookie')
+
+
+
+      if (localStorage.getItem("lc") != "true" || null) {
+        setTimeout(function () {
+          container.classList.add("open");
+        }, 3000);
+      }
+
+
+      function accept(){
+        lc = "true"
+        localStorage.setItem("lc",lc)
+        container.classList.remove('open')
+      }
+
+      function reject(){
+        lc = "false"
+        localStorage.setItem("lc",lc)
+        container.classList.remove('open')
+      }
+
+      cookie.addEventListener('click', function(){
+        container.classList.add('open')
+      })
+
+     
+    </script>
+  </body>
+</html>
