@@ -307,7 +307,7 @@ ul {
   min-height: 500px;
   /* background-color: blueviolet; */
   /* width: 100vw; */
-  margin: 50px 50px;
+  margin: 50px 150px;
 }
 
 .vdbox {
@@ -394,6 +394,7 @@ ul {
 }
 
 .salerow {
+  margin: 0 150px !important;
   padding: 0 10px;
 }
 
