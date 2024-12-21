@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single image lightbox</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .container {
+        width: 800px;
+        background-color: white;
+        padding: 16px;
+    }
+
+    .imgbox {
+        height: 65px;
+        width: 120px;
+    }
+
+    .imgbox img {
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    h4,
+    .imgbox,
+    p {
+        margin-bottom: 15px;
+    }
+
+    .showimg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #000000ea;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boxsize {
+        height: 60%;
+        width: 60%;
+    }
+
+    .xmark {
+        position: absolute;
+        top: 80px;
+        right: 60px;
+        font-size: 30px;
+        color: rgb(248, 248, 248);
+        cursor: pointer;
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum corporis saepe perferendis! Quaerat, saepe
+            reiciendis expedita doloribus, voluptates nisi laborum assumenda eius a eos vitae ducimus facilis sapiente
+            blanditiis fugiat. At quod neque enim. Porro perspiciatis neque repellendus iste magnam similique at
+            repellat hic quidem, quam error debitis ipsa dolorem?</p>
+        <h4>Monkeys are primates known for their intelligence, social behavior, and dexterous use of their hands and
+            tails.</h4>
+        <div class="imgbox" id="monkey">
+            <img src="https://images.theconversation.com/files/290710/original/file-20190903-175663-lqb3z6.jpg?ixlib=rb-4.1.0&rect=48%2C0%2C5422%2C3603&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip"
+                alt="" class="fistimg">
+        </div>
+        <h5>Click 👆 Image to full screen</h5>
+        <br>
+        <h4>Puppy dogs are highly energetic, playful, and require socialization and training to develop into
+            well-behaved adult dogs.</h4>
+        <div class="imgbox" id="dog">
+            <img src="https://www.hindustantimes.com/ht-img/img/2023/09/12/550x309/puppies_1694528974357_1694528988760.jpg"
+                alt="" class="secondimg">
+        </div>
+        <h5>Click 👆 Image to full screen</h5>
+        <br>
+        <h4>Pandas are herbivorous bears native to China, known for their distinctive black-and-white coloring and their
+            diet that primarily consists of bamboo.</h4>
+        <div class="imgbox" id="panda">
+            <img src="https://www.timeforkids.com/wp-content/uploads/2023/11/G3G5_231117_bear_steps.jpg?w=1024" alt=""
+                class="thirdimg">
+        </div>
+        <h5>Click 👆 Image to full screen</h5>
+    </div>
+    <div class="showpopup">
+        <div class="showimgbox"></div>
+
+    </div>
+    <i class="fa-solid fa-x " id="xmark"></i>
+
+
+    <script>
+        let monkey = document.querySelector('#monkey')
+        let dog = document.querySelector('#dog')
+        let panda = document.querySelector('#panda')
+        let show = document.querySelector('.showpopup')
+        let showimgbox = document.querySelector('.showimgbox')
+        let firstimg = document.querySelector('.fistimg')
+        let secondimg = document.querySelector('.secondimg')
+        let thirdimg = document.querySelector('.thirdimg')
+        let xmark = document.querySelector('#xmark')
+        let imgbox = document.querySelector('.imgbox')
+
+        let originalContainers = {
+            firstimg: firstimg.parentElement,
+            secondimg: secondimg.parentElement,
+            thirdimg: thirdimg.parentElement
+        };
+
+
+
+        monkey.addEventListener('click', function () {
+            show.classList.add('showimg')
+            showimgbox.classList.add('boxsize')
+            showimgbox.append(firstimg)
+            firstimg.style.width = '100%'
+            firstimg.style.height = '100%'
+            xmark.classList.add('xmark')
+            xmark.style.display = 'block'
+        })
+
+
+        dog.addEventListener('click', function () {
+            show.classList.add('showimg')
+            showimgbox.classList.add('boxsize')
+            showimgbox.append(secondimg)
+            secondimg.style.width = '100%'
+            secondimg.style.height = '100%'
+            xmark.classList.add('xmark')
+            xmark.style.display = 'block'
+        })
+
+        panda.addEventListener('click', function () {
+            show.classList.add('showimg')
+            showimgbox.classList.add('boxsize')
+            showimgbox.append(thirdimg)
+            thirdimg.style.width = '100%'
+            thirdimg.style.height = '100%'
+            xmark.classList.add('xmark')
+            xmark.style.display = 'block'
+        })
+
+        xmark.addEventListener('click', function () {
+
+            show.classList.remove('showimg')
+            originalContainers.firstimg.append(firstimg);
+            originalContainers.secondimg.append(secondimg);
+            originalContainers.thirdimg.append(thirdimg);
+
+
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>

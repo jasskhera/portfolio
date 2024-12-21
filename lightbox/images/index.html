@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      body {
+        height: 100vh;
+        background-color: #2c2c2c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        max-width: 900px;
+        display: flex;
+        gap: 15px;
+      }
+
+      .container img {
+        flex: 1;
+        max-width: 100%;
+      }
+
+      .slider {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+
+      .slider img {
+        width: 100%;
+        position: absolute;
+        z-index: 0;
+      }
+
+      .navigation {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .slider img.active {
+        z-index: 1;
+      }
+      .carousel {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <div class="container">
+        <img src="thumbnails/1.jpg" onclick="openx(0)" />
+        <img src="thumbnails/2.jpg" onclick="openx(1)" />
+        <img src="thumbnails/3.jpg" onclick="openx(2)" />
+      </div>
+
+      <div class="carousel">
+        <div class="slider">
+          <img src="images/1.jpg" class="active" />
+          <img src="images/2.jpg" />
+          <img src="images/3.jpg" />
+        </div>
+        <div class="navigation">
+          <button onclick="left()">Left</button>
+          <button onclick="right()">Right</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      let carousel = document.querySelector(".carousel");
+      let items = document.querySelectorAll(".slider img");
+      let activeSlide = 0;
+
+      function left() {
+        if (activeSlide == 0) {
+          activeSlide = items.length;
+        }
+        items.forEach(function (item) {
+          item.classList.remove("active");
+        });
+        activeSlide--;
+        items[activeSlide].classList.add("active");
+      }
+      function right() {
+        if (activeSlide == items.length - 1) {
+          activeSlide = -1;
+        }
+        items.forEach(function (item) {
+          item.classList.remove("active");
+        });
+
+        activeSlide++;
+        items[activeSlide].classList.add("active");
+      }
+
+      function openx(index) {
+        activeSlide = index;
+        carousel.style.display = "block";
+        items.forEach(function (item) {
+          item.classList.remove("active");
+        });
+        items[activeSlide].classList.add("active");
+      }
+    </script>
+  </body>
+</html>

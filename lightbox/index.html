@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      display: flex;
+      max-width: 900px;
+    }
+    .container img {
+      flex: 1;
+
+      max-width: 100%;
+    }
+    .slider {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    .slider img {
+      width: 100%;
+      position: absolute;
+      z-index: 0;
+    }
+    .navigation {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 50%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .slider img.active {
+      z-index: 1;
+    }
+    .carousel {
+      display: none;
+    }
+    .closebutton {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      display: flex;
+      justify-content: end;
+      z-index: 2;
+    }
+    .closebutton button {
+      padding: 10px 15px;
+      border-radius: 50%;
+      border: none;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <img src="./images/thumbnails/1.jpg" onclick="open_img(0)" />
+      <img src="./images/thumbnails/2.jpg" onclick="open_img(1)" />
+      <img src="./images/thumbnails/3.jpg" onclick="open_img(2)" />
+    </div>
+
+    <div class="carousel">
+      <div class="closebutton"><button onclick="closex()">X</button></div>
+      <div class="slider">
+        <img src="./images/images/1.jpg" class="active" />
+        <img src="./images/images/2.jpg" />
+        <img src="./images/images/3.jpg" />
+      </div>
+
+      <div class="navigation">
+        <button onclick="left()">Left</button>
+        <button onclick="right()">Right</button>
+      </div>
+    </div>
+
+    <script>
+      let carousel = document.querySelector(".carousel");
+      let items = document.querySelectorAll(".slider img");
+      let indexx = 0;
+
+      function left() {
+        if (indexx == 0) {
+          indexx = items.length;
+        }
+        items.forEach((element) => {
+          element.classList.remove("active");
+        });
+        indexx--;
+        items[indexx].classList.add("active");
+      }
+
+      function right() {
+        if (indexx == items.length - 1) {
+          indexx = -1;
+        }
+        items.forEach((element) => {
+          element.classList.remove("active");
+        });
+        indexx++;
+        items[indexx].classList.add("active");
+      }
+
+      function open_img(ele) {
+        indexx = ele;
+        carousel.style.display = "block";
+        items.forEach((item) => {
+          item.classList.remove("active");
+        });
+        items[indexx].classList.add("active");
+      }
+
+      function closex() {
+        carousel.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

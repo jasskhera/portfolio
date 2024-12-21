@@ -63,6 +63,7 @@
         <li><a id="stopwatch" target="_blank">stopwatch</a></li>
         <li><a id="timer" target="_blank">timer</a></li>
         <li><a id="modal" target="_blank">modal</a></li>
+        <li><a id="lightbox" target="_blank">lightbox</a></li>
       </ul>
     </div>
 
@@ -96,6 +97,7 @@
       var stopwatchPageURL = baseURL + "stopwatch/stopwatch.html";
       var timerPageURL = baseURL + "timer/timer.html";
       var modalPageURL = baseURL + "modal/index.html";
+      var lightboxPageURL = baseURL + "lightbox/index.html";
 
       // Get all <li> elements
       var listItems = document.querySelectorAll("ul li");
@@ -189,6 +191,10 @@
             document
               .querySelector("#modal")
               .setAttribute("href", modalPageURL);
+          case "lightbox":
+            document
+              .querySelector("#lightbox")
+              .setAttribute("href", lightboxPageURL);
         }
       });
     </script>
