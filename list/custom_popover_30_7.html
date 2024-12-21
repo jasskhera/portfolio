@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+        .main.active {
+            border-bottom: 2px solid !important;
+            color: black !important;
+        }
+        .main:hover {
+            color: black;
+        }
+        .main {
+            border: none !important;
+            color: gray;
+            font-weight: bolder;
+        }
+        /* .tab-content{
+            margin-top: 40px !important;
+        } */
+        .nav-pills .nav-link.active{
+            border-left: 10px solid purple !important;
+            background-color: white;
+            color: black;
+        }
+        .nav-item a{
+            border:1px solid purple !important;
+            color: gray;
+            margin: 0 10px;
+        }
+        .pane-img{
+          height: 660px;
+          width: 600px;
+        }
+        .pane-img img{
+          height: 100%;
+          width: 100%;
+        }
+
+    </style>
+
+    <title>Hello, world!</title>
+</head>
+<body>
+    <!-- Primary Nav Tabs -->
+    <!-- <ul class="nav nav-tabs container" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link main active" id="web-tab" data-bs-toggle="tab" data-bs-target="#web-tab-pane" type="button" role="tab" aria-controls="web-tab-pane" aria-selected="true">Web Development</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link main" id="it-tab" data-bs-toggle="tab" data-bs-target="#it-tab-pane" type="button" role="tab" aria-controls="it-tab-pane" aria-selected="false">IT Certifications</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link main" id="leader-tab" data-bs-toggle="tab" data-bs-target="#leader-tab-pane" type="button" role="tab" aria-controls="leader-tab-pane" aria-selected="false">Leadership</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link main" id="data-tab" data-bs-toggle="tab" data-bs-target="#data-tab-pane" type="button" role="tab" aria-controls="data-tab-pane" aria-selected="false">Data Science</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link main" id="com-tab" data-bs-toggle="tab" data-bs-target="#com-tab-pane" type="button" role="tab" aria-controls="com-tab-pane" aria-selected="false">Communication</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link main" id="bus-tab" data-bs-toggle="tab" data-bs-target="#bus-tab-pane" type="button" role="tab" aria-controls="bus-tab-pane" aria-selected="false">Business Analytics & Intelligence</button>
+      </li>
+    </ul> -->
+    <div class="tab-content container" id="myTabContent">
+      <!-- web Tab Pane -->
+      <div class="tab-pane fade show d-flex active" id="web-tab-pane" role="tabpanel" aria-labelledby="web-tab" tabindex="0">
+        <!-- Secondary Nav Pills for web -->
+        <ul class="nav nav-pills mb-3 nested-nav d-flex flex-column w-25 gap-5" id="secondaryNavWebDev" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active d-flex" id="nav-javascript-tab" data-bs-toggle="pill" href="#nav-javascript" role="tab" aria-controls="nav-javascript" aria-selected="true">
+              <img src="https://cms-images.udemycdn.com/96883mtakkm8/7kN9RBFSMFNHzsGWsElMPi/dde73f8d1c47e046f035274e78410590/hands-on-practice.png" alt="" height="64" width="64">
+             <div class="tab_content">
+              <h5> Hands-on training</h5>
+            <p>Upskill effectively with AI-powered coding exercises, practice tests, skills assessments, labs, and workspaces</p>
+             </div>
+          </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-react-tab" data-bs-toggle="pill" href="#nav-react" role="tab" aria-controls="nav-react" aria-selected="false">React JS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-angular-tab" data-bs-toggle="pill" href="#nav-angular" role="tab" aria-controls="nav-angular" aria-selected="false">Angular</a>
+          </li>
+        </ul>
+        <!-- Secondary Nav Pills Content for Web -->
+        <div class="tab-content" id="secondaryNavContentWebDev">
+          <div class="tab-pane fade show active" id="nav-javascript" role="tabpanel" aria-labelledby="nav-javascript-tab">
+            <div class="pane-img">
+              <img src="https://cms-images.udemycdn.com/96883mtakkm8/4kbyXne3Slx9Sfz4nTBqdf/8ac2b75db1a118f15e2fb5dfe2bb4567/desktop-hands-on-learning-2x.png" alt="">
+            </div>
+          </div>
+          <div class="tab-pane fade" id="nav-react" role="tabpanel" aria-labelledby="nav-react-tab">
+            <h5>React JS Courses</h5>
+            <p>React JS content goes here.</p>
+          </div>
+          <div class="tab-pane fade" id="nav-angular" role="tabpanel" aria-labelledby="nav-angular-tab">
+            <h5>Angular Courses</h5>
+            <p>Angular content goes here.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- IT Tab Pane -->
+      <div class="tab-pane fade" id="it-tab-pane" role="tabpanel" aria-labelledby="it-tab" tabindex="0">
+        <!-- Secondary Nav Pills for IT -->
+        <ul class="nav nav-pills mb-3 nested-nav" id="secondaryNavIT" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="nav-amazon-tab" data-bs-toggle="pill" href="#nav-amazon" role="tab" aria-controls="nav-amazon" aria-selected="true">Amazon</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-Amazon_1-tab" data-bs-toggle="pill" href="#nav-Amazon_1" role="tab" aria-controls="nav-Amazon_1" aria-selected="false">Amazon_1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-Amazon_2-tab" data-bs-toggle="pill" href="#nav-Amazon_2" role="tab" aria-controls="nav-Amazon_2" aria-selected="false">Amazon_2</a>
+          </li>
+        </ul>
+        <!-- Secondary Nav Pills Content for IT -->
+        <div class="tab-content" id="secondaryNavContentITCert">
+          <div class="tab-pane fade show active" id="nav-amazon" role="tabpanel" aria-labelledby="nav-amazon-tab">
+            <div class="cat_swiper-container">
+                <div class="swiper-wrapper wrapped">
+                  <div class="con swiper-slide">
+                    <div class="swiper_overlay_1 border border-2">
+                      <div class="img_box">
+                        <img
+                          src="https://img-c.udemycdn.com/course/240x135/2488654_e156_3.jpg"
+                          class="slide-image"
+                        />
+                      </div>
+                      <div class="detail_box px-4 py-2">
+                        <h6>The Complete 2023 PHP Full Stack Web Developer Bootcamp</h6>
+                        <span class="text-secondary">Srini Vanmala</span>
+                        <p class="m-0 mb-2 fw-bold">4.7
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star-half-stroke"></i>
+                        </p>
+                        <span class="fw-bold">₹6,500</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="con swiper-slide">
+                    <div class="swiper_overlay_1 border border-2">
+                      <div class="img_box">
+                        <img
+                          src="https://img-c.udemycdn.com/course/240x135/2488654_e156_3.jpg"
+                          class="slide-image"
+                        />
+                      </div>
+                      <div class="detail_box px-4 py-2">
+                        <h6>The Complete 2023 PHP Full Stack Web Developer Bootcamp</h6>
+                        <span class="text-secondary">Srini Vanmala</span>
+                        <p class="m-0 mb-2 fw-bold">4.7
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star-half-stroke"></i>
+                        </p>
+                        <span class="fw-bold">₹6,500</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="con swiper-slide">
+                    <div class="swiper_overlay_1 border border-2">
+                      <div class="img_box">
+                        <img
+                          src="https://img-c.udemycdn.com/course/240x135/2488654_e156_3.jpg"
+                          class="slide-image"
+                        />
+                      </div>
+                      <div class="detail_box px-4 py-2">
+                        <h6>The Complete 2023 PHP Full Stack Web Developer Bootcamp</h6>
+                        <span class="text-secondary">Srini Vanmala</span>
+                        <p class="m-0 mb-2 fw-bold">4.7
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star-half-stroke"></i>
+                        </p>
+                        <span class="fw-bold">₹6,500</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="con swiper-slide">
+                    <div class="swiper_overlay_1 border border-2">
+                      <div class="img_box">
+                        <img
+                          src="https://img-c.udemycdn.com/course/240x135/2488654_e156_3.jpg"
+                          class="slide-image"
+                        />
+                      </div>
+                      <div class="detail_box px-4 py-2">
+                        <h6>The Complete 2023 PHP Full Stack Web Developer Bootcamp</h6>
+                        <span class="text-secondary">Srini Vanmala</span>
+                        <p class="m-0 mb-2 fw-bold">4.7
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star-half-stroke"></i>
+                        </p>
+                        <span class="fw-bold">₹6,500</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="con swiper-slide">
+                    <div class="swiper_overlay_1 border border-2">
+                      <div class="img_box">
+                        <img
+                          src="https://img-c.udemycdn.com/course/240x135/2488654_e156_3.jpg"
+                          class="slide-image"
+                        />
+                      </div>
+                      <div class="detail_box px-4 py-2">
+                        <h6>The Complete 2023 PHP Full Stack Web Developer Bootcamp</h6>
+                        <span class="text-secondary">Srini Vanmala</span>
+                        <p class="m-0 mb-2 fw-bold">4.7
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star-half-stroke"></i>
+                        </p>
+                        <span class="fw-bold">₹6,500</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+          </div>
+          <div class="tab-pane fade" id="nav-Amazon_1" role="tabpanel" aria-labelledby="nav-Amazon_1-tab">
+            <h5>Amazon_1 Courses</h5>
+            <p>Amazon_1 content goes here.</p>
+          </div>
+          <div class="tab-pane fade" id="nav-Amazon_2" role="tabpanel" aria-labelledby="nav-Amazon_2-tab">
+            <h5>Amazon_2 Courses</h5>
+            <p>Amazon_2 content goes here.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- leader Tab Pane -->
+      <div class="tab-pane fade" id="leader-tab-pane" role="tabpanel" aria-labelledby="leader-tab" tabindex="0">
+        <!-- Secondary Nav Pills for leader -->
+        <ul class="nav nav-pills mb-3 nested-nav" id="secondaryNavLeadership" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="nav-leadership-tab" data-bs-toggle="pill" href="#nav-leadership-content" role="tab" aria-controls="nav-leadership-content" aria-selected="true">Leadership</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-leadership_1-tab" data-bs-toggle="pill" href="#nav-leadership_1-content" role="tab" aria-controls="nav-leadership_1-content" aria-selected="false">Leadership_1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-leadership_2-tab" data-bs-toggle="pill" href="#nav-leadership_2-content" role="tab" aria-controls="nav-leadership_2-content" aria-selected="false">Leadership_2</a>
+          </li>
+        </ul>
+        <!-- Secondary Nav Pills Content for leader -->
+        <div class="tab-content" id="secondaryNavContentLeadership">
+          <div class="tab-pane fade show active" id="nav-leadership-content" role="tabpanel" aria-labelledby="nav-leadership-tab">
+            <h5>Leadership Courses</h5>
+            <p>Leadership content goes here.</p>
+          </div>
+          <div class="tab-pane fade" id="nav-leadership_1-content" role="tabpanel" aria-labelledby="nav-leadership_1-tab">
+            <h5>Leadership_1 Courses</h5>
+            <p>Leadership_1 content goes here.</p>
+          </div>
+          <div class="tab-pane fade" id="nav-leadership_2-content" role="tabpanel" aria-labelledby="nav-leadership_2-tab">
+            <h5>Leadership_2 Courses</h5>
+            <p>Leadership_2 content goes here.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- data Tab Pane -->
+      <div class="tab-pane fade" id="data-tab-pane" role="tabpanel" aria-labelledby="data-tab" tabindex="0">
+          <!-- Secondary Nav Pills for data -->
+          <ul class="nav nav-pills mb-3 nested-nav" id="secondaryNavData" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="nav-data-tab" data-bs-toggle="pill" href="#nav-data-content" role="tab" aria-controls="nav-data-content" aria-selected="true">data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="nav-data_1-tab" data-bs-toggle="pill" href="#nav-data_1-content" role="tab" aria-controls="nav-data_1-content" aria-selected="false">data_1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="nav-data_2-tab" data-bs-toggle="pill" href="#nav-data_2-content" role="tab" aria-controls="nav-data_2-content" aria-selected="false">data_2</a>
+            </li>
+          </ul>
+          <!-- Secondary Nav Pills Content for data -->
+          <div class="tab-content" id="secondaryNavContentData">
+            <div class="tab-pane fade show active" id="nav-data-content" role="tabpanel" aria-labelledby="nav-data-tab">
+              <h5>Data Courses</h5>
+              <p>data content goes here.</p>
+            </div>
+            <div class="tab-pane fade" id="nav-data_1-content" role="tabpanel" aria-labelledby="nav-data_1-tab">
+              <h5>data_1 Courses</h5>
+              <p>data_1 content goes here.</p>
+            </div>
+            <div class="tab-pane fade" id="nav-data_2-content" role="tabpanel" aria-labelledby="nav-data_2-tab">
+              <h5>data_2 Courses</h5>
+              <p>data_2 content goes here.</p>
+            </div>
+          </div>
+      </div>
+
+         <!-- com Tab Pane -->
+      <div class="tab-pane fade" id="com-tab-pane" role="tabpanel" aria-labelledby="com-tab" tabindex="0">
+           <!-- Secondary Nav Pills for com -->
+           <ul class="nav nav-pills mb-3 nested-nav" id="secondaryNavCom" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="nav-com-tab" data-bs-toggle="pill" href="#nav-com-content" role="tab" aria-controls="nav-com-content" aria-selected="true">com</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="nav-com_1-tab" data-bs-toggle="pill" href="#nav-com_1-content" role="tab" aria-controls="nav-com_1-content" aria-selected="false">com_1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="nav-com_2-tab" data-bs-toggle="pill" href="#nav-com_2-content" role="tab" aria-controls="nav-com_2-content" aria-selected="false">com_2</a>
+            </li>
+          </ul>
+          <!-- Secondary Nav Pills Content for com -->
+          <div class="tab-content" id="secondaryNavContentCom">
+            <div class="tab-pane fade show active" id="nav-com-content" role="tabpanel" aria-labelledby="nav-com-tab">
+              <h5>com Courses</h5>
+              <p>com content goes here.</p>
+            </div>
+            <div class="tab-pane fade" id="nav-com_1-content" role="tabpanel" aria-labelledby="nav-com_1-tab">
+              <h5>com_1 Courses</h5>
+              <p>com_1 content goes here.</p>
+            </div>
+            <div class="tab-pane fade" id="nav-com_2-content" role="tabpanel" aria-labelledby="nav-com_2-tab">
+              <h5>com_2 Courses</h5>
+              <p>com_2 content goes here.</p>
+            </div>
+          </div>
+      </div>
+
+      <!-- bus Tab Pane -->
+      <div class="tab-pane fade" id="bus-tab-pane" role="tabpanel" aria-labelledby="bus-tab" tabindex="0">
+         <!-- Secondary Nav Pills for bus -->
+         <ul class="nav nav-pills mb-3 nested-nav" id="secondaryNavBus" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="nav-bus-tab" data-bs-toggle="pill" href="#nav-bus-content" role="tab" aria-controls="nav-bus-content" aria-selected="true">bus</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="nav-bus_1-tab" data-bs-toggle="pill" href="#nav-bus_1-content" role="tab" aria-controls="nav-bus_1-content" aria-selected="false">bus_1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="nav-bus_2-tab" data-bs-toggle="pill" href="#nav-bus_2-content" role="tab" aria-controls="nav-bus_2-content" aria-selected="false">bus_2</a>
+            </li>
+          </ul>
+          <!-- Secondary Nav Pills Content for bus -->
+          <div class="tab-content" id="secondaryNavContentBus">
+            <div class="tab-pane fade show active" id="nav-bus-content" role="tabpanel" aria-labelledby="nav-bus-tab">
+              <h5>bus Courses</h5>
+              <p>bus content goes here.</p>
+            </div>
+            <div class="tab-pane fade" id="nav-bus_1-content" role="tabpanel" aria-labelledby="nav-bus_1-tab">
+              <h5>bus_1 Courses</h5>
+              <p>bus_1 content goes here.</p>
+            </div>
+            <div class="tab-pane fade" id="nav-bus_2-content" role="tabpanel" aria-labelledby="nav-bus_2-tab">
+              <h5>bus_2 Courses</h5>
+              <p>bus_2 content goes here.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+      );
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
+    </script>
+</body>
+</html>
